@@ -1,0 +1,60 @@
+.textbox{
+    width: 70%;
+    height: 50px;
+    font-size: xx-large;
+    border-color: black;
+    border-radius: 10px;
+    background-color: yellow;
+    font-family: 'Berkshire Swash', cursive;
+    background-image: url(cherrybg2.jfif);
+}
+
+
+.textbox::placeholder{
+    color: black;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.linkbox{
+    border-color: blue;
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    font-size: x-large;
+    font-family: 'Berkshire Swash', cursive;
+    background-image: url(cherrybg2.jfif);
+}
+
+
+.urllable{
+    font-family: 'Berkshire Swash', cursive;
+    color: chartreuse;
+}
+
+.submitbtn{
+    background-color: white;
+    border-radius: 10px;
+    border-color: blue;
+    color: blue;
+    height: 52px;
+    font-size: x-large;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.submitbtn:hover{
+    transform: translate(0px,-3px);
+    box-shadow: darkgrey;
+    background-color: chartreuse;
+    color: darkblue;
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+}
+
+.ontouch{
+    z-index: 0;
+}
+
+.ontouch:hover{
+    transform: scale(1.25);
+    z-index: 1;
+}

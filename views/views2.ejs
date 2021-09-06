@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>URL_Shortener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="icon" href=<%=bgimg%> type="image/x-icon">
+</head>
+<body background=<%=bgimg%> 
+    <br><br><br><br>
+    <div>
+    <div align="middle">
+        <div align="middle">
+            <h1 class="titlecard">URL SHORTENER</h1>
+            <h6 class="titlecard" >BY AKASH</h6>
+            <br><br>
+        </div>
+    </div>
+    </div>
+    <div align="middle" >
+    <form action="/generate" method="POST">
+        <input type="text" class="textbox" name="longurl" placeholder="Enter the URL here..." id="longurl" required>
+        <br><br>
+        <input type="text" class="textbox" name="email" placeholder="Enter Your email here..." id="email" required>
+        <br><br>
+        <button type="submit" class="submitbtn"><b>GO...</b></button>
+    </form>
+    <br>
+    <div>
+        <h1 color="blue" class="urllable">The Short URL is :<input id="foo" class="linkbox" value=<%= link %>></input></h1>
+        <div align="middle">
+            <button data-clipboard-target="#foo" class="submitbtn">COPY</button>
+            <a href=<%= link %> target="_blank"><button class="submitbtn">VISIT</button></a>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    new ClipboardJS('.btn');
+
+    function help(){
+        alert("type the url to be shrunk and your email in respective boxes and click \" go\", the result will be displayed and also sent to provided mail from \" teentinkersofficial@gmail.com \"...");
+    }
+</script>
+<style>
+    .textbox{
+    width: 70%;
+    height: 50px;
+    font-size: xx-large;
+    border-color: black;
+    border-radius: 10px;
+    background-color: yellow;
+    font-family: 'Berkshire Swash', cursive;
+    background-image: url(<%=textimg%>);
+}
+.textbox::placeholder{
+    color: black;
+    font-family: 'Berkshire Swash', cursive;
+}
+.textbox:hover::placeholder{
+    color: gray;
+    font-family: 'Berkshire Swash', cursive;
+    cursor: pointer;
+}
+.linkbox{
+    border-color: blue;
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    font-size: x-large;
+    font-family: 'Berkshire Swash', cursive;
+    background-image: url(<%=textimg%>);
+}
+.urllable{
+    font-family: 'Berkshire Swash', cursive;
+    color: chartreuse;
+}
+
+.submitbtn{
+    background-color: white;
+    border-radius: 10px;
+    border-color: blue;
+    color: blue;
+    height: 52px;
+    font-size: x-large;
+    font-family: 'Berkshire Swash', cursive;
+}
+.submitbtn:hover{
+    transform: translate(0px,-3px);
+    box-shadow: darkgrey;
+    background-color: chartreuse;
+    color: darkblue;
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+}
+
+.ontouch{
+    z-index: 0;
+}
+.ontouch:hover{
+    transform: scale(1.25);
+    z-index: 1;
+}
+
+.titlecard{
+    border-color: red;
+    background-image: linear-gradient(orange, pink, lightblue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    Font-family: 'Berkshire Swash';
+}
+</style>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>URL_Shortener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="icon" href=<%=bgimg%> type="image/x-icon">
+</head>
+<body background=<%=bgimg%>>
+    <br><br><br><br>
+    <div>
+    <div align="middle">
+        <div align="middle">
+            <h1 class="titlecard">URL SHORTENER</h1>
+            <h6 class="titlecard" >BY AKASH</h6>
+            <div class="border2">
+            <button class="submitbtn" onclick="help()" >HELP !</button>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div align="middle" >
+    <form action="/generate" method="POST">
+        <div class="border">
+        <input type="text" class="textbox" name="longurl" placeholder=" Enter the URL here..." id="longurl" required>
+        </div>
+        <br><br>
+        <div class="border">
+        <input type="text" class="textbox" name="email" placeholder=" Enter Your email here..." id="email" required>
+        </div>
+        <br><br>
+        <div class="border2">
+        <button type="submit" class="submitbtn ontouch"><b>GO...</b></button>
+        </div>
+    </form>
+    <br>
+    </div>
+    </div>
+</body>
+<style>
+
+.border {
+    width: 70%;
+    border-radius: 50px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right,red,red, orange,purple, purple);
+    border-image-slice: 1;
+    
+}
+
+.border:hover{
+    border-image: linear-gradient(to right,purple,purple, red,red, orange,orange,);
+    border-image-slice: 1;
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+}
+
+.border2 {
+    width: 10%;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right,red,red, orange,purple, purple);
+    border-image-slice: 1;
+    
+}
+
+.textbox{
+    font-size: xx-large;
+    width : 99%;
+    height : 100%;
+}
+
+
+.textbox::placeholder{
+    color: gray;
+}
+.textbox:hover::placeholder{
+    color: black;
+    cursor: pointer;
+}
+.linkbox{
+    border-color: blue;
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    font-size: x-large;
+    font-family: 'Berkshire Swash', cursive;
+    background-image: url(<%=textimg%>);
+}
+.urllable{
+    font-family: 'Berkshire Swash', cursive;
+    color: chartreuse;
+}
+.submitbtn{
+    background-color: white;
+    color: blue;
+    height: 100%;
+    width: 100%;
+    font-size: x-large;
+    font-family: 'Berkshire Swash', cursive;
+}
+.submitbtn:hover{
+    box-shadow: darkgrey;
+    background-image:linear-gradient(to right, red, orange, purple);
+    color: black;
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+}
+.ontouch{
+    z-index: 0;
+}
+.ontouch:hover{
+    transform: scale(1.25);
+    z-index: 1;
+}
+
+.titlecard{
+    border-color: red;
+    background-image: linear-gradient(orange, pink, lightblue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    Font-family: 'Berkshire Swash';
+}
+</style>
+<script>
+    function help(){
+        alert("type the url to be shrunk and your email in respective boxes and click \" go\", the result will be displayed and also sent to provided mail from \" teentinkersofficial@gmail.com \"...");
+    }
+</script>
+</html>
