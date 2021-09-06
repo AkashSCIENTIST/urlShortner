@@ -1,0 +1,8 @@
+{
+  "firebase": {
+    "projectId": "synday-f21da",
+    "databaseURL": "https://synday-f21da.firebaseio.com",
+    "storageBucket": "synday-f21da.appspot.com",
+    "locationId": "us-central"
+  }
+}
