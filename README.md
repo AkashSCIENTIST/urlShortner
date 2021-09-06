@@ -1,9 +1,9 @@
 # urlShortner
-##Live Demo
+## Live Demo
 
-**[Click Here for Live Demo](https://synday-f21da.web.app/)**
+*[Click Here for Live Demo](https://synday-f21da.web.app/)*
 
-##Procedure
+## Procedure
 
 After downloading the repo
 
