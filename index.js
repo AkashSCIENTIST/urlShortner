@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const http = require('http');
 const PORT = process.env.PORT || 8000;
 var admin = require('firebase-admin');
-const serviceAccountPath = "./synday-f21da-firebase-adminsdk-3h8rx-470f02303e.json"
+const serviceAccountPath = "./sdk_crediantials.json"
 var serviceAccount = require(serviceAccountPath);
 
 admin.initializeApp({
